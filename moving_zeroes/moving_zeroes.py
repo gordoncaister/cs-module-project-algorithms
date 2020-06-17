@@ -2,10 +2,16 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
-    # Your code here
+#   use python sort method to sort numbers, based on their positive value, in descending order
 
-    pass
+def moving_zeroes(arr):
+    arr.sort(reverse=True, key=sortfunc) #reverse=True = descending order, key= a function to specify the sorting criteria
+    return arr
+# this function returns the element by its absolute (positive) value
+def sortfunc(e):
+    return abs(e)
+
+
 
 
 if __name__ == '__main__':
